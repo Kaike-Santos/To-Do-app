@@ -27,7 +27,7 @@ app.post('/criar',(requisicao, resposta) => {
                 return console.log(erro)
         }
 
-        resposta.redirect('/    ')
+        resposta.redirect('/')
     } )
 })
 
@@ -47,10 +47,8 @@ app.get('/',(requisicao, resposta) =>{
             }
         })
         
-        
+        resposta.render('home', {tarefas})
     })
-
-    resposta.render('home')
 })
 
 const conexao = mysql.createConnection ({
